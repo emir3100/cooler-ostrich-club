@@ -6,6 +6,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import CssBaseline from "@material-ui/core/CssBaseline";
 
 const theme = createMuiTheme({
+  spacing: 8,
   palette: {
     background: {
       default: "#e4f0e2"
