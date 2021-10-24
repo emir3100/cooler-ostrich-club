@@ -5,13 +5,27 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import './Hero.css'
 import Button from '@material-ui/core/Button';
-import { spacing } from '@material-ui/system';
 import Box from '@material-ui/core/Box';
+
+// import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper bundle
+import 'swiper/swiper-bundle.min.css'
+import 'swiper/swiper.min.css'
+
+
+// import Swiper core and required modules
+import SwiperCore, { EffectCube, Pagination, Autoplay } from "swiper";
+
+// install Swiper modules
+SwiperCore.use([EffectCube, Pagination, Autoplay ]);
 
 const styles = theme => ({
     root: {
       flexGrow: 1,
     },
+
   });
 
 
@@ -41,14 +55,24 @@ function Hero(props) {
                     </div>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <div>
-
+                    <div className="">
+                        <Swiper effect={'cube'} grabCursor={true} cubeEffect={{
+                            "shadow": false,
+                            "slideShadows": false,
+                            "shadowOffset": 20,
+                            "shadowScale": 0.94
+                            }} pagination={false} className="mySwiper" loop={true} autoplay={{ delay: 5000, disableOnInteraction: false }} >
+                            <SwiperSlide ><img className={classes.swiper} src="/images/nft1.png" /></SwiperSlide>
+                            <SwiperSlide><img className={classes.swiper} src="/images/nft2.png" /></SwiperSlide>
+                            <SwiperSlide><img className={classes.swiper} src="/images/nft3.png" /></SwiperSlide>
+                            <SwiperSlide><img className={classes.swiper} src="/images/nft4.png" /></SwiperSlide>
+                            <SwiperSlide><img className={classes.swiper} src="/images/nft5.png" /></SwiperSlide>
+                        </Swiper>
                     </div>
                 </Grid>
-                
             </Grid>
         </div>
-    )
+    );
 }
 
 Hero.propTypes = {

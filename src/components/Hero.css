@@ -6,3 +6,28 @@
     max-width: 80%;
     margin: 0 auto;
 }
+
+.swiper-container {
+    width: 500px;
+
+  }
+
+.swiper {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+  }
+  
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
