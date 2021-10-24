@@ -6,6 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
+import './Navbar.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -29,10 +30,10 @@ function SimpleAppBar(props) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="transparent" elevation={0}>
+      <AppBar position="static" color="transparent" elevation={0} className='custom-appbar'>
         <Toolbar>
           <Typography variant="h6" color="primary" className={classes.grow}>
-            Cooler Ostrich Club
+            COOLER OSTRICH CLUB
           </Typography>
           <div className={classes.grow}>
             <Button color="inherit">Stats</Button>
@@ -41,10 +42,10 @@ function SimpleAppBar(props) {
             <Button color="inherit">Gallery</Button>
           </div>
           
-          <IconButton> <FontAwesomeIcon icon={faTwitter}/> </IconButton>
-          <IconButton> <FontAwesomeIcon icon={faInstagram}/> </IconButton>
-          <IconButton> <FontAwesomeIcon icon={faGithub}/> </IconButton>
-          <IconButton> <FontAwesomeIcon icon={faDiscord}/> </IconButton>
+          <IconButton color="primary"> <FontAwesomeIcon icon={faTwitter}/> </IconButton>
+          <IconButton color="primary"> <FontAwesomeIcon icon={faInstagram}/> </IconButton>
+          <IconButton color="primary"> <FontAwesomeIcon icon={faGithub}/> </IconButton>
+          <IconButton color="primary"> <FontAwesomeIcon icon={faDiscord}/> </IconButton>
            
         </Toolbar>
       </AppBar> 
