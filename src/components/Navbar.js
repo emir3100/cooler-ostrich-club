@@ -32,7 +32,7 @@ function SimpleAppBar(props) {
     <div className={classes.root}>
       <AppBar position="static" color="transparent" elevation={0} className='custom-appbar'>
         <Toolbar>
-          <Typography variant="h6" color="primary" className={classes.grow}>
+          <Typography variant="h6" color="light" className={classes.grow}>
             COOLER OSTRICH CLUB
           </Typography>
           <div className={classes.grow}>
@@ -44,10 +44,10 @@ function SimpleAppBar(props) {
             <Button color="inherit">FAQ</Button>
           </div>
           
-          <IconButton color="primary"> <FontAwesomeIcon icon={faTwitter}/> </IconButton>
-          <IconButton color="primary"> <FontAwesomeIcon icon={faInstagram}/> </IconButton>
-          <IconButton color="primary"> <FontAwesomeIcon icon={faGithub}/> </IconButton>
-          <IconButton color="primary"> <FontAwesomeIcon icon={faDiscord}/> </IconButton>
+          <IconButton color="inherit"> <FontAwesomeIcon icon={faTwitter}/> </IconButton>
+          <IconButton color="inherit"> <FontAwesomeIcon icon={faInstagram}/> </IconButton>
+          <IconButton color="inherit"> <FontAwesomeIcon icon={faGithub}/> </IconButton>
+          <IconButton color="inherit"> <FontAwesomeIcon icon={faDiscord}/> </IconButton>
            
         </Toolbar>
       </AppBar> 

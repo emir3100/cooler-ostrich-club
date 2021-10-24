@@ -37,17 +37,17 @@ function Hero(props) {
             <Grid container spacing={40}>
                 <Grid item xs={12} sm={6}>
                     <div>
-                        <Typography variant="h1" color="" className={classes.grow}>
+                        <Typography variant="h1" className={classes.grow}>
                             WELCOME TO COOLER OSTRICH CLUB
                         </Typography>
                         <div className="mt-16">
                             <Box display="inline" mr="2rem">
-                                <Button variant="contained" color="primary" className={classes.button}>
+                                <Button variant="contained" color="secondary" className={classes.button}>
                                     BUY ON OPENSEA
                                 </Button>
                             </Box>
                             <Box display="inline" mr="2rem">
-                                <Button variant="contained" color="secondary" className={classes.button}>
+                                <Button variant="contained" color="primary" className={classes.button}>
                                     JOIN OUR DISCORD
                                 </Button>
                             </Box>

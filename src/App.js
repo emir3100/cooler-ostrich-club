@@ -9,12 +9,14 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 const theme = createMuiTheme({
   spacing: 8,
   palette: {
+    type: "dark",
     background: {
-      default: "#e4f0e2"
+      default: "#7d4c9d"
     },
     primary: {
       main: '#7593B1'
     },
+    
   },
   typography: {
     fontFamily: 'consolas, monospace',
