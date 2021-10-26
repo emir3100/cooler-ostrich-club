@@ -47,42 +47,42 @@ function Hero(props) {
             duration: 1,
             opacity: 0,
             y: 100
-        })
+        }, "0.5")
         timeline.from(image,{
             duration: 1,
             opacity: 0,
             y: 100
-        })
+        }, "0.5")
     })
 
     return (
-        <div>
-            <div className="custom-container mt-16">
+        <div className="bg">
+            <div className="custom-container pt-16">
                 <Grid container spacing={40}>
-                    <Grid item xs={12} sm={6}>
-                        <div>
-                            <Typography variant="h1" className={classes.grow} ref={el => text = el}>
-                                WELCOME TO COOLER OSTRICH CLUB
-                            </Typography>
-                            <div className="mt-16" mt="10rem" ref={el => buttons = el}>
-                                <Box display="inline" mr="10rem">
-                                    <Button variant="contained" color="secondary" className={classes.button} style={{ "transform": "scale(1.5)", "transform-origin": "left"}}>
-                                        BUY ON OPENSEA
-                                    </Button>
-                                </Box>
-                                <Box display="inline">
-                                    <Button variant="contained" color="primary" className={classes.button} style={{ "transform": "scale(1.5)"}}>
-                                        JOIN OUR DISCORD
-                                    </Button>
-                                </Box>
-                            </div>
+                    <Grid item xs={12} sm={6} display="flex" style={{ "align-self": "center" }}>
+
+                        <Typography variant="h1" className={classes.grow} ref={el => text = el}>
+                            WELCOME TO COOLER OSTRICH CLUB
+                        </Typography>
+                        <div className="mt-10" mt="10rem" ref={el => buttons = el}>
+                            <Box display="inline" mr="10rem">
+                                <Button variant="contained" color="secondary" className={classes.button} style={{ "transform": "scale(1.5)", "transform-origin": "left"}}>
+                                    BUY ON OPENSEA
+                                </Button>
+                            </Box>
+                            <Box display="inline">
+                                <Button variant="contained" color="primary" className={classes.button} style={{ "transform": "scale(1.5)"}}>
+                                    JOIN OUR DISCORD
+                                </Button>
+                            </Box>
                         </div>
+
                     </Grid>
                     <Grid item xs={12} sm={6}>
                         <div className="" ref={el => image = el}>
                             <Swiper effect={'cube'} grabCursor={true} cubeEffect={{
-                                "shadow": false,
-                                "slideShadows": false,
+                                "shadow": true,
+                                "slideShadows": true,
                                 "shadowOffset": 20,
                                 "shadowScale": 0.94
                                 }} pagination={false} className="mySwiper" loop={true} autoplay={{ delay: 5000, disableOnInteraction: false }} >
@@ -95,7 +95,7 @@ function Hero(props) {
                     </Grid>
                 </Grid>
             </div>
-            <div className="wrapper mt-16">
+            <div className="wrapper mt-16" style={{"position": "relative"}}>
                 <div className="custom-container py-7">
                     <Grid container spacing={40}>
                         <Grid item xs={12} sm={6}>

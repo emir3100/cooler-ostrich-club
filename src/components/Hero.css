@@ -1,3 +1,22 @@
+.bg{
+  position: relative;
+}
+
+.bg::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url(https://raw.githubusercontent.com/larvalabs/cryptopunks/master/punks.png);
+  opacity: 0.2;
+}
+
+.pt-16{
+  padding-top: 150px !important;
+}
+
 .mt-16{
     margin-top: 150px !important;
 }

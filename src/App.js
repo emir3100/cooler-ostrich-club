@@ -12,7 +12,7 @@ const theme = createMuiTheme({
   palette: {
     type: "dark",
     background: {
-      default: "#4f45a1"
+      default: "#00061b"
     },
     primary: {
       main: '#7593B1'
@@ -36,7 +36,7 @@ function App() {
     <MuiThemeProvider theme={theme}> 
      <CssBaseline />
       <div>
-        <Navbar />
+        <Navbar style={{"position": "relative"}}/>
         <Hero />
       </div>
     </MuiThemeProvider>
