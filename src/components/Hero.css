@@ -2,6 +2,11 @@
     margin-top: 150px !important;
 }
 
+.mt-10{
+  margin-top: 100px !important;
+}
+
+
 .custom-container{
     max-width: 80%;
     margin: 0 auto;
@@ -34,7 +39,7 @@
 
   .wrapper {
     width: 100%;
-    background-color: burlywood;
+    background-color: #609361;
   }
 
   .py-7 {

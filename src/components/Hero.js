@@ -64,14 +64,14 @@ function Hero(props) {
                             <Typography variant="h1" className={classes.grow} ref={el => text = el}>
                                 WELCOME TO COOLER OSTRICH CLUB
                             </Typography>
-                            <div className="mt-16" ref={el => buttons = el}>
-                                <Box display="inline" mr="2rem">
-                                    <Button variant="contained" color="secondary" className={classes.button}>
+                            <div className="mt-16" mt="10rem" ref={el => buttons = el}>
+                                <Box display="inline" mr="10rem">
+                                    <Button variant="contained" color="secondary" className={classes.button} style={{ "transform": "scale(1.5)", "transform-origin": "left"}}>
                                         BUY ON OPENSEA
                                     </Button>
                                 </Box>
-                                <Box display="inline" mr="2rem">
-                                    <Button variant="contained" color="primary" className={classes.button}>
+                                <Box display="inline">
+                                    <Button variant="contained" color="primary" className={classes.button} style={{ "transform": "scale(1.5)"}}>
                                         JOIN OUR DISCORD
                                     </Button>
                                 </Box>
@@ -107,7 +107,7 @@ function Hero(props) {
                             </Typography>
                         </Grid>
                         <Grid item xs={12} sm={6} display="flex" style={{ "align-self": "center" }}>
-                            <Button variant="contained" color="secondary" className={classes.button} style={{ "transform": "scale(1.5)" ,"margin-left": "10 rem" }}>
+                            <Button variant="contained" color="secondary" className={classes.button} style={{ "transform": "scale(1.5)", "transform-origin": "left", "margin": "0 auto", "display": "block" }}>
                                 CONNECT METAMASK
                             </Button>
                         </Grid>
