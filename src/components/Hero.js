@@ -27,7 +27,6 @@ const styles = theme => ({
     root: {
       flexGrow: 1,
     },
-
   });
 
 
@@ -57,44 +56,64 @@ function Hero(props) {
     })
 
     return (
-        <div className="custom-container mt-16">
-            <Grid container spacing={40}>
-                <Grid item xs={12} sm={6}>
-                    <div>
-                        <Typography variant="h1" className={classes.grow} ref={el => text = el}>
-                            WELCOME TO COOLER OSTRICH CLUB
-                        </Typography>
-                        <div className="mt-16" ref={el => buttons = el}>
-                            <Box display="inline" mr="2rem">
-                                <Button variant="contained" color="secondary" className={classes.button}>
-                                    BUY ON OPENSEA
-                                </Button>
-                            </Box>
-                            <Box display="inline" mr="2rem">
-                                <Button variant="contained" color="primary" className={classes.button}>
-                                    JOIN OUR DISCORD
-                                </Button>
-                            </Box>
+        <div>
+            <div className="custom-container mt-16">
+                <Grid container spacing={40}>
+                    <Grid item xs={12} sm={6}>
+                        <div>
+                            <Typography variant="h1" className={classes.grow} ref={el => text = el}>
+                                WELCOME TO COOLER OSTRICH CLUB
+                            </Typography>
+                            <div className="mt-16" ref={el => buttons = el}>
+                                <Box display="inline" mr="2rem">
+                                    <Button variant="contained" color="secondary" className={classes.button}>
+                                        BUY ON OPENSEA
+                                    </Button>
+                                </Box>
+                                <Box display="inline" mr="2rem">
+                                    <Button variant="contained" color="primary" className={classes.button}>
+                                        JOIN OUR DISCORD
+                                    </Button>
+                                </Box>
+                            </div>
                         </div>
-                    </div>
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                        <div className="" ref={el => image = el}>
+                            <Swiper effect={'cube'} grabCursor={true} cubeEffect={{
+                                "shadow": false,
+                                "slideShadows": false,
+                                "shadowOffset": 20,
+                                "shadowScale": 0.94
+                                }} pagination={false} className="mySwiper" loop={true} autoplay={{ delay: 5000, disableOnInteraction: false }} >
+                                <SwiperSlide ><img className={classes.swiper} src="/images/nft1.png" alt="nft" /></SwiperSlide>
+                                <SwiperSlide><img className={classes.swiper} src="/images/nft2.png" alt="nft" /></SwiperSlide>
+                                <SwiperSlide><img className={classes.swiper} src="/images/nft3.png"  alt="nft" /></SwiperSlide>
+                                <SwiperSlide><img className={classes.swiper} src="/images/nft4.png" alt="nft" /></SwiperSlide>
+                            </Swiper>
+                        </div>
+                    </Grid>
                 </Grid>
-                <Grid item xs={12} sm={6}>
-                    <div className="" ref={el => image = el}>
-                        <Swiper effect={'cube'} grabCursor={true} cubeEffect={{
-                            "shadow": false,
-                            "slideShadows": false,
-                            "shadowOffset": 20,
-                            "shadowScale": 0.94
-                            }} pagination={false} className="mySwiper" loop={true} autoplay={{ delay: 5000, disableOnInteraction: false }} >
-                            <SwiperSlide ><img className={classes.swiper} src="/images/nft1.png" /></SwiperSlide>
-                            <SwiperSlide><img className={classes.swiper} src="/images/nft2.png" /></SwiperSlide>
-                            <SwiperSlide><img className={classes.swiper} src="/images/nft3.png" /></SwiperSlide>
-                            <SwiperSlide><img className={classes.swiper} src="/images/nft4.png" /></SwiperSlide>
-                            <SwiperSlide><img className={classes.swiper} src="/images/nft5.png" /></SwiperSlide>
-                        </Swiper>
-                    </div>
-                </Grid>
-            </Grid>
+            </div>
+            <div className="wrapper mt-16">
+                <div className="custom-container py-7">
+                    <Grid container spacing={40}>
+                        <Grid item xs={12} sm={6}>
+                            <Typography variant="h3" className={classes.grow} >
+                                CLAIM YOUR COOL OSTRICH
+                            </Typography>
+                            <Typography variant="p" className={classes.grow} >
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl justo, tristique vitae ultricies eget, ultrices sed nulla. Etiam sed consequat odio. 
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={12} sm={6} display="flex" style={{ "align-self": "center" }}>
+                            <Button variant="contained" color="secondary" className={classes.button} style={{ "transform": "scale(1.5)" ,"margin-left": "10 rem" }}>
+                                CONNECT METAMASK
+                            </Button>
+                        </Grid>
+                    </Grid>
+                </div>
+            </div>
         </div>
     );
 }

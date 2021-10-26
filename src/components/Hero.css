@@ -9,7 +9,7 @@
 
 .swiper-container {
     width: 500px;
-
+    overflow: unset !important;
   }
 
 .swiper {
@@ -30,4 +30,14 @@
   .swiper-slide img {
     display: block;
     width: 100%;
+  }
+
+  .wrapper {
+    width: 100%;
+    background-color: burlywood;
+  }
+
+  .py-7 {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
   }
