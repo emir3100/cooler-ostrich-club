@@ -78,14 +78,14 @@ function Hero(props) {
                         </div>
 
                     </Grid>
-                    <Grid item xs={12} sm={6}>
+                    <Grid item xs={12} sm={6}  style={{"display":"flex" ,"justify-content": "flex-end" }}>
                         <div className="" ref={el => image = el}>
                             <Swiper effect={'cube'} grabCursor={true} cubeEffect={{
                                 "shadow": true,
                                 "slideShadows": true,
                                 "shadowOffset": 20,
                                 "shadowScale": 0.94
-                                }} pagination={false} className="mySwiper" loop={true} autoplay={{ delay: 5000, disableOnInteraction: false }} >
+                                }} pagination={false} className="mySwiper" loop={true} autoplay={{ delay: 4000, disableOnInteraction: false }} >
                                 <SwiperSlide ><img className={classes.swiper} src="/images/nft1.png" alt="nft" /></SwiperSlide>
                                 <SwiperSlide><img className={classes.swiper} src="/images/nft2.png" alt="nft" /></SwiperSlide>
                                 <SwiperSlide><img className={classes.swiper} src="/images/nft3.png"  alt="nft" /></SwiperSlide>
@@ -107,7 +107,7 @@ function Hero(props) {
                             </Typography>
                         </Grid>
                         <Grid item xs={12} sm={6} display="flex" style={{ "align-self": "center" }}>
-                            <Button variant="contained" color="secondary" className={classes.button} style={{ "transform": "scale(1.5)", "transform-origin": "left", "margin": "0 auto", "display": "block" }}>
+                            <Button variant="contained" color="secondary" className={classes.button} style={{ "transform": "scale(1.5)", "margin": "0 auto", "display": "block" }}>
                                 CONNECT METAMASK
                             </Button>
                         </Grid>
