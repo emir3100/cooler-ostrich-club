@@ -7,6 +7,7 @@ import './Hero.css'
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -21,6 +22,7 @@ import SwiperCore, { EffectCube, Pagination, Autoplay } from "swiper";
 // install Swiper modules
 SwiperCore.use([EffectCube, Pagination, Autoplay ]);
 
+gsap.registerPlugin(ScrollTrigger);
 
 
 const styles = theme => ({
@@ -37,11 +39,13 @@ function Hero(props) {
     let buttons = useRef(null)
     let image = useRef(null)
 
+
     useEffect(()=> {
         timeline.from(text,{
             duration: 1,
             opacity: 0,
-            y: 100
+            y: 100,
+            stagger: 0.6
         })
         timeline.from(buttons,{
             duration: 1,
@@ -53,7 +57,25 @@ function Hero(props) {
             opacity: 0,
             y: 100
         }, "0.5")
-    })
+        // timeline.from(text2,{
+        //     duration: 1,
+        //     opacity: 0,
+        //     y: 100
+        // }, "0.5")
+        // gsap.from(text2, {
+        //     scrollTrigger: {
+        //         trigger: triggerContainer,
+        //         endTrigger: triggerContainer,
+        //         toggleActions: "restart pause restart pause",
+        //         start: "90% bottom",
+        //         markers: true
+        //     },
+        //     opacity: 0,
+        //     x: 100,
+        //     duration: 1,
+        //     ease: "expo.out"
+        // });
+    });
 
     return (
         <div className="bg">
@@ -96,7 +118,7 @@ function Hero(props) {
                 </Grid>
             </div>
             <div className="wrapper mt-16" style={{"position": "relative"}}>
-                <div className="custom-container py-7">
+                <div className="custom-container py-7" >
                     <Grid container spacing={40}>
                         <Grid item xs={12} sm={6}>
                             <Typography variant="h3" className={classes.grow} >
@@ -107,7 +129,7 @@ function Hero(props) {
                             </Typography>
                         </Grid>
                         <Grid item xs={12} sm={6} display="flex" style={{ "align-self": "center" }}>
-                            <Button variant="contained" color="secondary" className={classes.button} style={{ "transform": "scale(1.5)", "margin": "0 auto", "display": "block" }}>
+                            <Button variant="contained" color="secondary" className={classes.button} style={{ "transform": "scale(1.5)", "margin": "0 auto", "display": "block" }} >
                                 CONNECT METAMASK
                             </Button>
                         </Grid>
