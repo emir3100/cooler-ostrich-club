@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import About from './components/About';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import CssBaseline from "@material-ui/core/CssBaseline";
 
@@ -38,6 +39,7 @@ function App() {
       <div>
         <Navbar style={{"position": "relative"}}/>
         <Hero />
+        <About style={{"position": "relative"}}/>
       </div>
     </MuiThemeProvider>
   );

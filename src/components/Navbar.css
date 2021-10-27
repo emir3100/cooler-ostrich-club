@@ -1,4 +1,9 @@
 .custom-appbar{
     backdrop-filter: blur(10px);
     background-color: rgba(245, 245, 245, 0.93);
+    color: transparent;
+}
+
+.custom-appbar.active{
+    background-color: #5762d5;
 }

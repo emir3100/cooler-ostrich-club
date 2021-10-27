@@ -78,8 +78,8 @@ function Hero(props) {
     });
 
     return (
-        <div className="bg">
-            <div className="custom-container pt-16">
+        <div className="bg" id="Home">
+            <div className="custom-container pt-16 pb-16">
                 <Grid container spacing={40}>
                     <Grid item xs={12} sm={6} display="flex" style={{ "align-self": "center" }}>
 
@@ -116,25 +116,6 @@ function Hero(props) {
                         </div>
                     </Grid>
                 </Grid>
-            </div>
-            <div className="wrapper mt-16" style={{"position": "relative"}}>
-                <div className="custom-container py-7" >
-                    <Grid container spacing={40}>
-                        <Grid item xs={12} sm={6}>
-                            <Typography variant="h3" className={classes.grow} >
-                                CLAIM YOUR COOL OSTRICH
-                            </Typography>
-                            <Typography variant="p" className={classes.grow} >
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl justo, tristique vitae ultricies eget, ultrices sed nulla. Etiam sed consequat odio. 
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={12} sm={6} display="flex" style={{ "align-self": "center" }}>
-                            <Button variant="contained" color="secondary" className={classes.button} style={{ "transform": "scale(1.5)", "margin": "0 auto", "display": "block" }} >
-                                CONNECT METAMASK
-                            </Button>
-                        </Grid>
-                    </Grid>
-                </div>
             </div>
         </div>
     );

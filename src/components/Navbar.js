@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -14,6 +14,8 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faDiscord } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 
+
+
 const styles = {
   root: {
     flexGrow: 1,
@@ -24,24 +26,35 @@ const styles = {
 };
 
 
-
 function SimpleAppBar(props) {
   const { classes } = props;
+  const [navbar, setNavbar] = useState(false);
+
+  const changeBg = () => {
+    if(window.scrollY >= 64){
+      setNavbar(true);  
+    }
+    else{
+      setNavbar(false);
+    }
+  }
+  
+  window.addEventListener("scroll", changeBg);
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="transparent" elevation={0} className='custom-appbar'>
+      <AppBar position="fixed" color="transparent" elevation={0} className={navbar ? "custom-appbar active" : "custom-appbar"}>
         <Toolbar>
           <Typography variant="h6" color="light" className={classes.grow}>
             COOLER OSTRICH CLUB
           </Typography>
           <div className={classes.grow}>
-            <Button color="inherit">Home</Button>
-            <Button color="inherit">About</Button>
-            <Button color="inherit">Stats</Button>
-            <Button color="inherit">Roadmap</Button>
-            <Button color="inherit">Team</Button>
-            <Button color="inherit">FAQ</Button>
+            <Button color="inherit" >Home</Button>
+            <Button color="inherit" >About</Button>
+            <Button color="inherit" >Stats</Button>
+            <Button color="inherit" >Roadmap</Button>
+            <Button color="inherit" >Team</Button>
+            <Button color="inherit" >FAQ</Button>
           </div>
           
           <IconButton color="inherit"> <FontAwesomeIcon icon={faTwitter}/> </IconButton>
