@@ -36,11 +36,11 @@ function App() {
   return (
     <MuiThemeProvider theme={theme}> 
      <CssBaseline />
-      <div>
+      <main id="Home">
         <Navbar style={{"position": "relative"}}/>
         <Hero />
-        <About style={{"position": "relative"}}/>
-      </div>
+        <About id="About" style={{"position": "relative"}}/>
+      </main>
     </MuiThemeProvider>
   );
 }

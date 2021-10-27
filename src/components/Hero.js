@@ -78,7 +78,7 @@ function Hero(props) {
     });
 
     return (
-        <div className="bg" id="Home">
+        <div className="bg">
             <div className="custom-container pt-16 pb-16">
                 <Grid container spacing={40}>
                     <Grid item xs={12} sm={6} display="flex" style={{ "align-self": "center" }}>

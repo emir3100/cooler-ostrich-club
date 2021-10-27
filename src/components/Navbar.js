@@ -49,12 +49,12 @@ function SimpleAppBar(props) {
             COOLER OSTRICH CLUB
           </Typography>
           <div className={classes.grow}>
-            <Button color="inherit" >Home</Button>
-            <Button color="inherit" >About</Button>
-            <Button color="inherit" >Stats</Button>
-            <Button color="inherit" >Roadmap</Button>
-            <Button color="inherit" >Team</Button>
-            <Button color="inherit" >FAQ</Button>
+            <Button color="inherit" href="#Home">Home</Button>
+            <Button color="inherit" href="#About">About</Button>
+            <Button color="inherit" href="#Stats">Stats</Button>
+            <Button color="inherit" href="#Roadmap">Roadmap</Button>
+            <Button color="inherit" href="#Team">Team</Button>
+            <Button color="inherit" href="#FAQ">FAQ</Button>
           </div>
           
           <IconButton color="inherit"> <FontAwesomeIcon icon={faTwitter}/> </IconButton>

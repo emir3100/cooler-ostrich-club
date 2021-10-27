@@ -21,7 +21,7 @@ function About(props) {
     const { classes } = props;
 
     return (
-        <div className="wrapper" style={{"position": "relative"}} id="About">
+        <div id="About" className="wrapper" style={{"position": "relative"}}>
                 <div className="custom-container py-7" >
                     <Grid container spacing={40}>
                         <Grid item xs={12} sm={6}>
