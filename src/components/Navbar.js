@@ -59,7 +59,7 @@ function SimpleAppBar(props) {
           
           <IconButton color="inherit"> <FontAwesomeIcon icon={faTwitter}/> </IconButton>
           <IconButton color="inherit"> <FontAwesomeIcon icon={faInstagram}/> </IconButton>
-          <IconButton color="inherit"> <FontAwesomeIcon icon={faGithub}/> </IconButton>
+          <IconButton color="inherit" href="https://github.com/emir3100/cooler-ostrich-club"> <FontAwesomeIcon icon={faGithub}/> </IconButton>
           <IconButton color="inherit"> <FontAwesomeIcon icon={faDiscord}/> </IconButton>
            
         </Toolbar>

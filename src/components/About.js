@@ -17,9 +17,9 @@ const styles = theme => ({
       flexGrow: 1,
     },
     bigAvatar: {
-        margin: 10,
-        width: 60,
-        height: 60,
+        margin: 15,
+        width: 100,
+        height: 100,
       },
   });
 
@@ -30,6 +30,9 @@ function About(props) {
         <div id="About" className="wrapper" style={{"position": "relative"}}>
                 <div className="custom-container py-7" >
                     <Grid container spacing={40}>
+                        <Grid item xs={12} sm={6} style={{ "display" : "flex", "align-self": "center", "justifyContent" : "start" }}>
+                            <img src="../images/3.png" alt="nft" style={{ "position" : "absolute", "width" : "auto", "height" : "25rem", "bottom" : "0" }}/>
+                        </Grid>
                         <Grid item xs={12} sm={6}>
                             <Typography variant="h3" className={classes.grow} >
                                 ABOUT US
@@ -38,13 +41,6 @@ function About(props) {
                                 We are a small group of software and game developers that decided to create a special NFT for the best animal on earth, "The ostrich". Get it now to join the Cooler Ostrich Club!
                             </Typography></div>
                             
-                        </Grid>
-                        <Grid item xs={12} sm={6} display="flex" style={{ "align-self": "center" }}>
-                            <Box display="inline">
-                                <Avatar alt="Remy Sharp" src="images/nft1.png" className={classes.bigAvatar} />
-                                
-                                
-                            </Box>
                         </Grid>
                     </Grid>
                 </div>
