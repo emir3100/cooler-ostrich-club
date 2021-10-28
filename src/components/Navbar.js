@@ -13,17 +13,32 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faDiscord } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 
-
-const styles = {
+const styles = theme => ({
   root: {
     flexGrow: 1,
   },
   grow: {
-    flexGrow: 0.5,
+    [theme.breakpoints.down("sm")]: {
+      flexGrow: 1,
+    },
+    [theme.breakpoints.up("md")]: {
+      flexGrow: 0.5,
+    }
   },
-};
+  desktop:{
+    [theme.breakpoints.down("sm")]: {
+      display: "none"
+    },
+  },
+  mobile:{
+    [theme.breakpoints.up("md")]: {
+      display: "none"
+    },
+  }
+});
 
 
 function SimpleAppBar(props) {
@@ -48,20 +63,22 @@ function SimpleAppBar(props) {
           <Typography variant="h6" color="light" className={classes.grow}>
             COOLER OSTRICH CLUB
           </Typography>
-          <div className={classes.grow}>
-            <Button color="inherit" href="#Home">Home</Button>
-            <Button color="inherit" href="#About">About</Button>
-            <Button color="inherit" href="#Stats">Stats</Button>
-            <Button color="inherit" href="#Roadmap">Roadmap</Button>
-            <Button color="inherit" href="#Team">Team</Button>
-            <Button color="inherit" href="#FAQ">FAQ</Button>
-          </div>
-          
-          <IconButton color="inherit"> <FontAwesomeIcon icon={faTwitter}/> </IconButton>
-          <IconButton color="inherit"> <FontAwesomeIcon icon={faInstagram}/> </IconButton>
-          <IconButton color="inherit" href="https://github.com/emir3100/cooler-ostrich-club"> <FontAwesomeIcon icon={faGithub}/> </IconButton>
-          <IconButton color="inherit"> <FontAwesomeIcon icon={faDiscord}/> </IconButton>
-           
+
+            <div className={classes.desktop} style={{ "flex-grow": "0.5" }}>
+              <Button color="inherit" href="#Home">Home</Button>
+              <Button color="inherit" href="#About">About</Button>
+              <Button color="inherit" href="#Stats">Stats</Button>
+              <Button color="inherit" href="#Roadmap">Roadmap</Button>
+              <Button color="inherit" href="#Team">Team</Button>
+              <Button color="inherit" href="#FAQ">FAQ</Button>
+            </div>
+            
+            <IconButton className={classes.desktop} color="inherit"> <FontAwesomeIcon icon={faTwitter}/> </IconButton>
+            <IconButton className={classes.desktop} color="inherit"> <FontAwesomeIcon icon={faInstagram}/> </IconButton>
+            <IconButton className={classes.desktop} color="inherit" href="https://github.com/emir3100/cooler-ostrich-club"> <FontAwesomeIcon icon={faGithub}/> </IconButton>
+            <IconButton className={classes.desktop} color="inherit"> <FontAwesomeIcon icon={faDiscord}/> </IconButton>
+            
+            <IconButton className={classes.mobile} color="inherit"> <FontAwesomeIcon icon={faBars}/> </IconButton>
         </Toolbar>
       </AppBar> 
     </div>

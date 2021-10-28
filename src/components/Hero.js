@@ -36,12 +36,7 @@ const styles = theme => ({
             justifyContent: "center !important",
             transform: "scale(0.8)"
           },
-          [theme.breakpoints.only("sm")]: {
-            justifyContent: "center !important",
-            transform: "scale(0.8)",
-            marginTop: "5rem"
-          },
-          [theme.breakpoints.only("md")]: {
+          [theme.breakpoints.between("sm", "md")]: {
             justifyContent: "center !important",
             transform: "scale(1)",
             marginTop: "5rem"
