@@ -31,28 +31,69 @@ const styles = theme => ({
     root: {
       flexGrow: 1,
     },
-    imagemd: {
-        [theme.breakpoints.down("md")]: {
+    imagebreakpoint: {
+        [theme.breakpoints.only("xs")]: {
             justifyContent: "center !important",
             transform: "scale(0.8)"
+          },
+          [theme.breakpoints.only("sm")]: {
+            justifyContent: "center !important",
+            transform: "scale(0.8)",
+            marginTop: "5rem"
+          },
+          [theme.breakpoints.only("md")]: {
+            justifyContent: "center !important",
+            transform: "scale(1)",
+            marginTop: "5rem"
           }
     },
-    buttonmd: {
-        [theme.breakpoints.down("md")]: {
+    buttonbreakpoint: {
+        [theme.breakpoints.only("xs")]: {
             justifyContent: "center !important",
             display: "flex",
             transform: "scale(1) !important",
             width: "100%",
             marginBlock: "2rem"
+          },
+          [theme.breakpoints.between("sm", "md")]: {
+            marginRight: "0 !important",
+            marginInline: "4rem !important",
+            transform: "scale(1) !important"
           }
     },
-    textmd: {
-        [theme.breakpoints.down("md")]: {
+    buttoncontainerbreakpoint: {
+        [theme.breakpoints.up("lg")]: {
+            marginTop: "10rem"
+          },
+        [theme.breakpoints.between("sm", "md")]: {
             justifyContent: "center !important",
             display: "flex",
-            fontSize: "3rem"
+            marginTop: "5rem"
           }
-    }
+    },
+    textbreakpoint: {
+        [theme.breakpoints.only("xs")]: {
+            justifyContent: "center !important",
+            display: "flex",
+            fontSize: "3rem",
+            textAlign: "center"
+          },
+          [theme.breakpoints.between("sm", "md")]: {
+            justifyContent: "center !important",
+            display: "flex",
+            fontSize: "5rem",
+            textAlign: "center"
+          }
+    },
+    customcontainer:{
+        maxWidth: "80%",
+        margin: "0 auto",
+        paddingTop: "150px !important",
+        paddingBottom: "150px !important",
+        [theme.breakpoints.only("xs")]: {
+            paddingBottom: "20px !important",
+        }
+    },
   });
 
 
@@ -83,28 +124,28 @@ function Hero(props) {
 
     return (
         <div className="bg">
-            <div className="custom-container pt-16 pb-16">
+            <div className={classes.customcontainer}>
                 <Grid container spacing={40}>
                     <Grid item xs={12} sm={12} md={12} lg={6} display="flex" style={{ "align-self": "center" }}>
 
-                        <Typography variant="h1" className={classes.grow, classes.textmd} ref={el => text = el}>
+                        <Typography variant="h1" className={classes.grow, classes.textbreakpoint} ref={el => text = el}>
                             WELCOME TO COOLER OSTRICH CLUB
                         </Typography>
-                        <div className="mt-10" mt="10rem" ref={el => buttons = el}>
+                        <div className={classes.buttoncontainerbreakpoint} mt="10rem" ref={el => buttons = el}>
                             <Box display="inline">
-                                <Button href="https://opensea.io/collection/cooler-ostrich-club" variant="contained" color="secondary" className={classes.buttonmd} style={{ "transform": "scale(1.5)", "transform-origin": "left", "margin-right": "8rem"}}>
+                                <Button href="https://opensea.io/collection/cooler-ostrich-club" variant="contained" color="secondary" className={classes.buttonbreakpoint} style={{ "transform": "scale(1.5)", "transform-origin": "left", "margin-right": "8rem"}}>
                                     BUY ON OPENSEA
                                 </Button>
                             </Box>
                             <Box display="inline">
-                                <Button variant="contained" color="primary" className={classes.buttonmd} style={{ "transform": "scale(1.5)", "transform-origin": "left"}}>
+                                <Button variant="contained" color="primary" className={classes.buttonbreakpoint} style={{ "transform": "scale(1.5)", "transform-origin": "left"}}>
                                     JOIN OUR DISCORD
                                 </Button>
                             </Box>
                         </div>
 
                     </Grid>
-                    <Grid item xs={12} sm={12} md={12} lg={6}  style={{"display":"flex" ,"justify-content": "flex-end" }} className={classes.imagemd} >
+                    <Grid item xs={12} sm={12} md={12} lg={6}  style={{"display":"flex" ,"justify-content": "flex-end" }} className={classes.imagebreakpoint} >
                         <div className="" ref={el => image = el}>
                             <Swiper effect={'cube'} grabCursor={true} cubeEffect={{
                                 "shadow": true,
