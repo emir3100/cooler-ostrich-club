@@ -16,11 +16,17 @@ const styles = theme => ({
     root: {
       flexGrow: 1,
     },
-    bigAvatar: {
-        margin: 15,
-        width: 100,
-        height: 100,
-      },
+    imagexs: {
+        [theme.breakpoints.only("xs")]: {
+            display: "none"
+          },
+          [theme.breakpoints.down("sm")]: {
+            left: "-85px"
+          },
+          [theme.breakpoints.up("md")]: {
+            height: "25rem !important"
+          },
+    }
   });
 
 function About(props) {
@@ -30,17 +36,16 @@ function About(props) {
         <div id="About" className="wrapper" style={{"position": "relative"}}>
                 <div className="custom-container py-7" >
                     <Grid container spacing={40}>
-                        <Grid item xs={12} sm={6} style={{ "display" : "flex", "align-self": "center", "justifyContent" : "start" }}>
-                            <img src="../images/3.png" alt="nft" style={{ "position" : "absolute", "width" : "auto", "height" : "25rem", "bottom" : "0" }}/>
+                        <Grid item xs={12} sm={6} style={{ "display" : "flex", "align-self": "center", "justifyContent" : "start" }} >
+                            <img src="../images/3.png" alt="nft" style={{ "position" : "absolute", "width" : "auto", "height" : "25rem", "bottom" : "0" }} className={classes.imagexs}/>
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Typography variant="h3" className={classes.grow} >
                                 ABOUT US
                             </Typography>
                             <div style={{ "margin-top": "1rem", "text-transform": "uppercase" }}><Typography variant="body1" className={classes.grow}>
-                                We are a small group of software and game developers that decided to create a special NFT for the best animal on earth, "The ostrich". Get it now to join the Cooler Ostrich Club!
+                                We are a small group of software and game developers that decided to create a special NFT for the best animal on earth, "The ostrich". Get it now to join the Cooler Ostrich Club and get access to our upcoming game.
                             </Typography></div>
-                            
                         </Grid>
                     </Grid>
                 </div>

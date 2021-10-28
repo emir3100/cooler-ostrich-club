@@ -19,6 +19,7 @@ import 'swiper/swiper.min.css'
 
 // import Swiper core and required modules
 import SwiperCore, { EffectCube, Pagination, Autoplay } from "swiper";
+import { fontSize } from '@mui/system';
 
 // install Swiper modules
 SwiperCore.use([EffectCube, Pagination, Autoplay ]);
@@ -30,6 +31,28 @@ const styles = theme => ({
     root: {
       flexGrow: 1,
     },
+    imagemd: {
+        [theme.breakpoints.down("md")]: {
+            justifyContent: "center !important",
+            transform: "scale(0.8)"
+          }
+    },
+    buttonmd: {
+        [theme.breakpoints.down("md")]: {
+            justifyContent: "center !important",
+            display: "flex",
+            transform: "scale(1) !important",
+            width: "100%",
+            marginBlock: "2rem"
+          }
+    },
+    textmd: {
+        [theme.breakpoints.down("md")]: {
+            justifyContent: "center !important",
+            display: "flex",
+            fontSize: "3rem"
+          }
+    }
   });
 
 
@@ -62,26 +85,26 @@ function Hero(props) {
         <div className="bg">
             <div className="custom-container pt-16 pb-16">
                 <Grid container spacing={40}>
-                    <Grid item xs={12} sm={6} display="flex" style={{ "align-self": "center" }}>
+                    <Grid item xs={12} sm={12} md={12} lg={6} display="flex" style={{ "align-self": "center" }}>
 
-                        <Typography variant="h1" className={classes.grow} ref={el => text = el}>
+                        <Typography variant="h1" className={classes.grow, classes.textmd} ref={el => text = el}>
                             WELCOME TO COOLER OSTRICH CLUB
                         </Typography>
                         <div className="mt-10" mt="10rem" ref={el => buttons = el}>
-                            <Box display="inline" mr="10rem">
-                                <Button href="https://opensea.io/collection/cooler-ostrich-club" variant="contained" color="secondary" className={classes.button} style={{ "transform": "scale(1.5)", "transform-origin": "left"}}>
+                            <Box display="inline">
+                                <Button href="https://opensea.io/collection/cooler-ostrich-club" variant="contained" color="secondary" className={classes.buttonmd} style={{ "transform": "scale(1.5)", "transform-origin": "left", "margin-right": "8rem"}}>
                                     BUY ON OPENSEA
                                 </Button>
                             </Box>
                             <Box display="inline">
-                                <Button variant="contained" color="primary" className={classes.button} style={{ "transform": "scale(1.5)"}}>
+                                <Button variant="contained" color="primary" className={classes.buttonmd} style={{ "transform": "scale(1.5)", "transform-origin": "left"}}>
                                     JOIN OUR DISCORD
                                 </Button>
                             </Box>
                         </div>
 
                     </Grid>
-                    <Grid item xs={12} sm={6}  style={{"display":"flex" ,"justify-content": "flex-end" }}>
+                    <Grid item xs={12} sm={12} md={12} lg={6}  style={{"display":"flex" ,"justify-content": "flex-end" }} className={classes.imagemd} >
                         <div className="" ref={el => image = el}>
                             <Swiper effect={'cube'} grabCursor={true} cubeEffect={{
                                 "shadow": true,
