@@ -9,7 +9,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: url(https://raw.githubusercontent.com/larvalabs/cryptopunks/master/punks.png);
+  background: url("../images/bg.png");
+  background-size: contain;
   opacity: 0.2;
 }
 

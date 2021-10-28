@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 
 // import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -23,7 +24,7 @@ import SwiperCore, { EffectCube, Pagination, Autoplay } from "swiper";
 SwiperCore.use([EffectCube, Pagination, Autoplay ]);
 
 gsap.registerPlugin(ScrollTrigger);
-
+gsap.registerPlugin(CSSRulePlugin);
 
 const styles = theme => ({
     root: {
@@ -38,8 +39,6 @@ function Hero(props) {
     let text = useRef(null)
     let buttons = useRef(null)
     let image = useRef(null)
-
-
     useEffect(()=> {
         timeline.from(text,{
             duration: 1,
@@ -47,34 +46,16 @@ function Hero(props) {
             y: 100,
             stagger: 0.6
         })
-        timeline.from(buttons,{
+        .from(buttons,{
             duration: 1,
             opacity: 0,
             y: 100
         }, "0.5")
-        timeline.from(image,{
+        .from(image,{
             duration: 1,
             opacity: 0,
             y: 100
-        }, "0.5")
-        // timeline.from(text2,{
-        //     duration: 1,
-        //     opacity: 0,
-        //     y: 100
-        // }, "0.5")
-        // gsap.from(text2, {
-        //     scrollTrigger: {
-        //         trigger: triggerContainer,
-        //         endTrigger: triggerContainer,
-        //         toggleActions: "restart pause restart pause",
-        //         start: "90% bottom",
-        //         markers: true
-        //     },
-        //     opacity: 0,
-        //     x: 100,
-        //     duration: 1,
-        //     ease: "expo.out"
-        // });
+        }, "0.5");
     });
 
     return (
@@ -88,7 +69,7 @@ function Hero(props) {
                         </Typography>
                         <div className="mt-10" mt="10rem" ref={el => buttons = el}>
                             <Box display="inline" mr="10rem">
-                                <Button variant="contained" color="secondary" className={classes.button} style={{ "transform": "scale(1.5)", "transform-origin": "left"}}>
+                                <Button href="https://opensea.io/collection/cooler-ostrich-club" variant="contained" color="secondary" className={classes.button} style={{ "transform": "scale(1.5)", "transform-origin": "left"}}>
                                     BUY ON OPENSEA
                                 </Button>
                             </Box>
@@ -108,10 +89,18 @@ function Hero(props) {
                                 "shadowOffset": 20,
                                 "shadowScale": 0.94
                                 }} pagination={false} className="mySwiper" loop={true} autoplay={{ delay: 4000, disableOnInteraction: false }} >
-                                <SwiperSlide ><img className={classes.swiper} src="/images/nft1.png" alt="nft" /></SwiperSlide>
-                                <SwiperSlide><img className={classes.swiper} src="/images/nft2.png" alt="nft" /></SwiperSlide>
-                                <SwiperSlide><img className={classes.swiper} src="/images/nft3.png"  alt="nft" /></SwiperSlide>
-                                <SwiperSlide><img className={classes.swiper} src="/images/nft4.png" alt="nft" /></SwiperSlide>
+                                <SwiperSlide ><img className={classes.swiper} src="/images/1.jpg" alt="nft" /></SwiperSlide>
+                                <SwiperSlide><img className={classes.swiper} src="/images/2.jpg" alt="nft" /></SwiperSlide>
+                                <SwiperSlide><img className={classes.swiper} src="/images/3.jpg"  alt="nft" /></SwiperSlide>
+                                <SwiperSlide><img className={classes.swiper} src="/images/4.jpg" alt="nft" /></SwiperSlide>
+                                <SwiperSlide><img className={classes.swiper} src="/images/5.jpg" alt="nft" /></SwiperSlide>
+                                <SwiperSlide><img className={classes.swiper} src="/images/6.jpg" alt="nft" /></SwiperSlide>
+                                <SwiperSlide><img className={classes.swiper} src="/images/7.jpg" alt="nft" /></SwiperSlide>
+                                <SwiperSlide><img className={classes.swiper} src="/images/8.jpg" alt="nft" /></SwiperSlide>
+                                <SwiperSlide><img className={classes.swiper} src="/images/9.jpg" alt="nft" /></SwiperSlide>
+                                <SwiperSlide><img className={classes.swiper} src="/images/10.jpg" alt="nft" /></SwiperSlide>
+                                <SwiperSlide><img className={classes.swiper} src="/images/11.jpg" alt="nft" /></SwiperSlide>
+                                <SwiperSlide><img className={classes.swiper} src="/images/12.jpg" alt="nft" /></SwiperSlide>
                             </Swiper>
                         </div>
                     </Grid>

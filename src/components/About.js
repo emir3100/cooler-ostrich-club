@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Avatar from '@material-ui/core/Avatar';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,6 +16,11 @@ const styles = theme => ({
     root: {
       flexGrow: 1,
     },
+    bigAvatar: {
+        margin: 10,
+        width: 60,
+        height: 60,
+      },
   });
 
 function About(props) {
@@ -28,12 +34,17 @@ function About(props) {
                             <Typography variant="h3" className={classes.grow} >
                                 ABOUT US
                             </Typography>
-                            <Typography variant="p" className={classes.grow} >
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl justo, tristique vitae ultricies eget, ultrices sed nulla. Etiam sed consequat odio. 
-                            </Typography>
+                            <div style={{ "margin-top": "1rem", "text-transform": "uppercase" }}><Typography variant="body1" className={classes.grow}>
+                                We are a small group of software and game developers that decided to create a special NFT for the best animal on earth, "The ostrich". Get it now to join the Cooler Ostrich Club!
+                            </Typography></div>
+                            
                         </Grid>
                         <Grid item xs={12} sm={6} display="flex" style={{ "align-self": "center" }}>
+                            <Box display="inline">
+                                <Avatar alt="Remy Sharp" src="images/nft1.png" className={classes.bigAvatar} />
                                 
+                                
+                            </Box>
                         </Grid>
                     </Grid>
                 </div>
