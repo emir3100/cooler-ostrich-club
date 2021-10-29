@@ -40,8 +40,8 @@ function App() {
       <main id="Home">
         <Navbar style={{"position": "relative"}}/>
         <Hero />
-        <About style={{"position": "relative"}}/>
-        <Stats style={{"position": "relative"}}/>
+        <About id="About" style={{"position": "relative"}}/>
+        <Stats id="Stats" style={{"position": "relative"}}/>
       </main>
     </MuiThemeProvider>
   );
