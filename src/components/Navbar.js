@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -20,7 +20,6 @@ import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 
@@ -95,6 +94,13 @@ function SimpleAppBar(props) {
   }
   
 
+  const toggleOffOnResize = () => {
+    if(window.innerWidth > 942){
+      setToggle(false);
+    }
+  }
+
+  window.addEventListener("resize", toggleOffOnResize);
 
   return (
 
@@ -130,32 +136,32 @@ function SimpleAppBar(props) {
         <nav aria-label="main">
           <List>
             <ListItem>
-              <ListItemButton href="#Home">
+              <ListItemButton button component="a" href="#Home">
                 <ListItemText primary="Home" />
               </ListItemButton>
             </ListItem>
             <ListItem>
-              <ListItemButton href="#About">
+              <ListItemButton button component="a" href="#About">
                 <ListItemText primary="About" />
               </ListItemButton>
             </ListItem>
             <ListItem>
-              <ListItemButton href="#Stats">
+              <ListItemButton button component="a" href="#Stats">
                 <ListItemText primary="Stats" />
               </ListItemButton>
             </ListItem>
             <ListItem>
-              <ListItemButton href="#Roadmap">
+              <ListItemButton button component="a" href="#Roadmap">
                 <ListItemText primary="Roadmap" />
               </ListItemButton>
             </ListItem>
             <ListItem>
-              <ListItemButton href="#Library">
+              <ListItemButton button component="a" href="#Library">
                 <ListItemText primary="Library" />
               </ListItemButton>
             </ListItem>
             <ListItem>
-              <ListItemButton href="#FAQ">
+              <ListItemButton button component="a" href="#FAQ">
                 <ListItemText primary="Faq" />
               </ListItemButton>
             </ListItem>
