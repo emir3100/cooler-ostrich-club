@@ -81,7 +81,7 @@ function SimpleAppBar(props) {
     }
     else{
       setNavbar(false);
-    }
+    } 
   }
   
   window.addEventListener("scroll", changeBg);
