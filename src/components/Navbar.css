@@ -7,3 +7,20 @@
 .custom-appbar.active{
     background-color: #5762d5;
 }
+
+#nav-drawer{
+    right: -300px !important;
+    transition: .4s ease-in-out;
+}
+
+#nav-drawer.active{
+    right: 0 !important;
+}
+
+#backdrop{
+    display: none !important;
+}
+
+#backdrop.active{
+    display: block !important;
+}

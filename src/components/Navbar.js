@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -14,6 +14,16 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faDiscord } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
+
+import Box from '@mui/material/Box';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import Divider from '@mui/material/Divider';
+
 
 
 const styles = theme => ({
@@ -37,8 +47,29 @@ const styles = theme => ({
     [theme.breakpoints.up("md")]: {
       display: "none"
     },
+  },
+  drawer: {
+    height: "100%",
+    background: "#5762d5",
+    position: "fixed",
+    top: 0,
+    right: 0,
+    width: "300px",
+    zIndex: "1200"
+  },
+  backdrop: {
+    background: "rgba(0,0,0,.7)",
+    position: "fixed",
+    top: 0,
+    right: 0,
+    height: "100%",
+    width: "100%",
+    zIndex: "1150"
   }
+  
 });
+
+
 
 
 function SimpleAppBar(props) {
@@ -56,7 +87,17 @@ function SimpleAppBar(props) {
   
   window.addEventListener("scroll", changeBg);
 
+  const [toggle, setToggle] = useState(false);  
+
+  function handleToggle(e){
+    e.preventDefault();
+    toggle ? setToggle(false) : setToggle(true);
+  }
+  
+
+
   return (
+
     <div className={classes.root}>
       <AppBar position="fixed" color="transparent" elevation={0} className={navbar ? "custom-appbar active" : "custom-appbar"}>
         <Toolbar>
@@ -69,7 +110,7 @@ function SimpleAppBar(props) {
               <Button color="inherit" href="#About">About</Button>
               <Button color="inherit" href="#Stats">Stats</Button>
               <Button color="inherit" href="#Roadmap">Roadmap</Button>
-              <Button color="inherit" href="#Team">Team</Button>
+              <Button color="inherit" href="#Library">Library</Button>
               <Button color="inherit" href="#FAQ">FAQ</Button>
             </div>
             
@@ -78,9 +119,77 @@ function SimpleAppBar(props) {
             <IconButton className={classes.desktop} color="inherit" href="https://github.com/emir3100/cooler-ostrich-club"> <FontAwesomeIcon icon={faGithub}/> </IconButton>
             <IconButton className={classes.desktop} color="inherit"> <FontAwesomeIcon icon={faDiscord}/> </IconButton>
             
-            <IconButton className={classes.mobile} color="inherit"> <FontAwesomeIcon icon={faBars}/> </IconButton>
+            <IconButton onClick={handleToggle} className={classes.mobile} color="inherit"> <FontAwesomeIcon icon={faBars}/> </IconButton>
         </Toolbar>
       </AppBar> 
+      <Box className={classes.drawer} id={toggle ? "nav-drawer active" : "nav-drawer"}>
+        <div style={{"padding": "1rem"}}>
+          <IconButton onClick={handleToggle} color="inherit" > <FontAwesomeIcon icon={faTimes}/> </IconButton>
+        </div>
+        <Divider />
+        <nav aria-label="main">
+          <List>
+            <ListItem>
+              <ListItemButton href="#Home">
+                <ListItemText primary="Home" />
+              </ListItemButton>
+            </ListItem>
+            <ListItem>
+              <ListItemButton href="#About">
+                <ListItemText primary="About" />
+              </ListItemButton>
+            </ListItem>
+            <ListItem>
+              <ListItemButton href="#Stats">
+                <ListItemText primary="Stats" />
+              </ListItemButton>
+            </ListItem>
+            <ListItem>
+              <ListItemButton href="#Roadmap">
+                <ListItemText primary="Roadmap" />
+              </ListItemButton>
+            </ListItem>
+            <ListItem>
+              <ListItemButton href="#Library">
+                <ListItemText primary="Library" />
+              </ListItemButton>
+            </ListItem>
+            <ListItem>
+              <ListItemButton href="#FAQ">
+                <ListItemText primary="Faq" />
+              </ListItemButton>
+            </ListItem>
+          </List>
+        </nav>
+        <Divider />
+        <nav aria-label="secondary">
+          <List>
+            <ListItem>
+              <ListItemButton>
+                <ListItemText primary="Twitter" />
+              </ListItemButton>
+            </ListItem>
+            <ListItem>
+              <ListItemButton>
+                <ListItemText primary="Instagram" />
+              </ListItemButton>
+            </ListItem>
+            <ListItem>
+              <ListItemButton>
+                <ListItemText primary="Github" />
+              </ListItemButton>
+            </ListItem>
+            <ListItem>
+              <ListItemButton>
+                <ListItemText primary="Discord" />
+              </ListItemButton>
+            </ListItem>
+          </List>
+        </nav>
+      </Box>
+      <div onClick={handleToggle} className={classes.backdrop} id={toggle ? "backdrop active" : "backdrop"}>
+            
+      </div>
     </div>
   );
 }

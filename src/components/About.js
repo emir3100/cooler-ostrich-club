@@ -16,7 +16,7 @@ const styles = theme => ({
     root: {
       flexGrow: 1,
     },
-    imagexs: {
+    imagebreakpoint: {
         [theme.breakpoints.only("xs")]: {
             display: "none"
           },
@@ -37,7 +37,7 @@ function About(props) {
                 <div className="custom-container py-7" >
                     <Grid container spacing={40}>
                         <Grid item xs={12} sm={6} style={{ "display" : "flex", "align-self": "center", "justifyContent" : "start" }} >
-                            <img src="../images/3.png" alt="nft" style={{ "position" : "absolute", "width" : "auto", "height" : "25rem", "bottom" : "0" }} className={classes.imagexs}/>
+                            <img src="../images/3.png" alt="nft" style={{ "position" : "absolute", "width" : "auto", "height" : "25rem", "bottom" : "0" }} className={classes.imagebreakpoint}/>
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Typography variant="h3" className={classes.grow} >
