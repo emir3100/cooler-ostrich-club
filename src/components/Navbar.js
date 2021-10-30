@@ -71,7 +71,7 @@ const styles = theme => ({
 
 
 
-function SimpleAppBar(props) {
+function Navbar(props) {
   const { classes } = props;
   const [navbar, setNavbar] = useState(false);
 
@@ -200,8 +200,8 @@ function SimpleAppBar(props) {
   );
 }
 
-SimpleAppBar.propTypes = {
+Navbar.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(SimpleAppBar);
+export default withStyles(styles)(Navbar);

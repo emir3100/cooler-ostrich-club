@@ -6,6 +6,7 @@
 
 .custom-appbar.active{
     background-color: #5762d5;
+    transition: .4s ease-in-out;
 }
 
 #nav-drawer{
