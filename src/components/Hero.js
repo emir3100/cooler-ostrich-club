@@ -115,7 +115,7 @@ function Hero(props) {
             opacity: 0,
             y: 100
         }, "0.5");
-    });
+    }, []);
 
     return (
         <div className="bg">
