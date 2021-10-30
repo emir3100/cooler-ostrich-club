@@ -60,7 +60,7 @@ function Stats(props) {
                                     Floor price
                                 </Typography>
                                 <Typography align="center" variant="h6" gutterBottom>
-                                    {collection[0].stats.floor_price} eth
+                                    {Math.round((collection[0].stats.floor_price)*100)/100} eth
                                 </Typography>
                             </Grid>
                             <Grid item xs={12} sm={6} md={3}>
@@ -68,7 +68,7 @@ function Stats(props) {
                                     Volume traded
                                 </Typography>
                                 <Typography align="center" variant="h6" gutterBottom>
-                                    {collection[0].stats.total_volume} eth
+                                    {Math.round((collection[0].stats.total_volume)*100)/100} eth
                                 </Typography>
                             </Grid>
                         </Grid>
