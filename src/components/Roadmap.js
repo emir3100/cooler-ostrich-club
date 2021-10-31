@@ -28,29 +28,49 @@ function Roadmap(props) {
                                     </div>
                                     <ul class="tmul">
                                         <li>
-                                        <span class="timeline-point"></span>
-                                        <span class="title">1</span>
-                                        <p>Lorem, ipsum dolor sit amet</p>
+                                            <span class="timeline-point"></span>
+                                            <Typography span component="span" className="title" variant="h6">
+                                                1
+                                            </Typography>
+                                            <Typography paragraph  component="p" align="center" gutterBottom variant="subtitle1">
+                                                Lorem, ipsum dolor sit amet
+                                            </Typography>
                                         </li>
                                         <li>
-                                        <span class="timeline-point"></span>
-                                        <span class="title">2</span>
-                                        <p>Lorem, ipsum dolor sit amet</p>
+                                            <span class="timeline-point"></span>
+                                            <Typography span component="span" className="title" variant="h6">
+                                                2
+                                            </Typography>
+                                            <Typography paragraph  component="p" align="center" gutterBottom variant="subtitle1">
+                                                Lorem, ipsum dolor sit amet
+                                            </Typography>
                                         </li>
                                         <li>
-                                        <span class="timeline-point"></span>
-                                        <span class="title">3</span>
-                                        <p>Lorem, ipsum dolor sit amet</p>
+                                            <span class="timeline-point"></span>
+                                            <Typography span component="span" className="title" variant="h6">
+                                                3
+                                            </Typography>
+                                            <Typography paragraph  component="p" align="center" gutterBottom variant="subtitle1">
+                                                Lorem, ipsum dolor sit amet
+                                            </Typography>
                                         </li>
                                         <li>
-                                        <span class="timeline-point"></span>
-                                        <span class="title">4</span>
-                                        <p>Lorem, ipsum dolor sit amet</p>
+                                            <span class="timeline-point"></span>
+                                            <Typography span component="span" className="title" variant="h6">
+                                                4
+                                            </Typography>
+                                            <Typography paragraph  component="p" align="center" gutterBottom variant="subtitle1">
+                                                Lorem, ipsum dolor sit amet
+                                            </Typography>
                                         </li>
                                         <li>
-                                        <span class="timeline-point"></span>
-                                        <span class="title">5</span>
-                                        <p>Lorem, ipsum dolor sit amet</p>
+                                            <span class="timeline-point"></span>
+                                            <Typography span component="span" className="title" variant="h6">
+                                                5
+                                            </Typography>
+                                            <Typography paragraph  component="p" align="center" gutterBottom variant="subtitle1">
+                                                Lorem, ipsum dolor sit amet
+                                            </Typography>
                                         </li>
                                     </ul>
                                 </section>

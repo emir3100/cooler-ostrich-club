@@ -4,14 +4,10 @@
   }
 
 
-section {
-  margin: 20px 0;
-}
 .timeline {
-  margin-top: 35px;
   padding: 15px;
   display: grid;
-  grid-template-columns: 40% auto;
+  grid-template-columns: 2% auto;
   justify-content: center;
 }
 
@@ -31,23 +27,23 @@ section {
 }
 .tmul li p {
   padding: 0 20px;
-  transition: 1.5s;
+  transition: 1s;
 }
 
 .title {
   position: absolute;
 
-  top: 30px;
+  top: 21px;
   left: -50px;
-  transition: 1.5s;
+  transition: 1s;
   font-size: 12px;
 }
 .timeline-line {
-  background: rgb(228, 228, 228);
+  background: #f50057;
   width: 4px;
   border-radius: 12px;
   position: relative;
-  justify-self: end;
+  justify-self: start;
 }
 
 .timeline-point {
@@ -55,12 +51,12 @@ section {
   position: absolute;
 
   border-radius: 50%;
-  background: rgb(228, 228, 228);
-  width: 8px;
-  height: 8px;
+  background: #f50057;
+  width: 15px;
+  height: 15px;
 
-  top: 30px;
-  left: -6px;
+  top: 2rem;
+  left: -0.9rem;
   transition: 1.5s ease;
 }
 .timeline-innerline {
@@ -92,6 +88,7 @@ section {
     transform: translateY(-10px);
     /* padding: 0 20px; */
     transition: 1.5s;
+    text-align: center;
   }
 
   .title {
@@ -99,17 +96,17 @@ section {
     font-size: 12px;
 
     position: absolute;
-    top: -60px;
-    left: 38%;
+    top: -5rem;
+    left: 40.5%;
   }
 
   .timeline-point {
     width: 15px;
     height: 15px;
 
-    top: -40px;
+    top: -2.5rem;
     left: 40%;
-    transition: 1.5s ease;
+    transition: 1s ease;
   }
 
   .timeline-line {
