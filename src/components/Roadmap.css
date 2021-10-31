@@ -89,6 +89,7 @@
     /* padding: 0 20px; */
     transition: 1.5s;
     text-align: center;
+    max-height: 0;
   }
 
   .title {

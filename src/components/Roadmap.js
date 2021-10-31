@@ -32,8 +32,8 @@ function Roadmap(props) {
                                             <Typography span component="span" className="title" variant="h6">
                                                 1
                                             </Typography>
-                                            <Typography paragraph  component="p" align="center" gutterBottom variant="subtitle1">
-                                                Lorem, ipsum dolor sit amet
+                                            <Typography paragraph component="p" align="center" gutterBottom variant="subtitle1">
+                                                Launch our NFT collection on Opensea.com
                                             </Typography>
                                         </li>
                                         <li>
@@ -41,8 +41,8 @@ function Roadmap(props) {
                                             <Typography span component="span" className="title" variant="h6">
                                                 2
                                             </Typography>
-                                            <Typography paragraph  component="p" align="center" gutterBottom variant="subtitle1">
-                                                Lorem, ipsum dolor sit amet
+                                            <Typography paragraph component="p" align="center" gutterBottom variant="subtitle1">
+                                                Get our nft collection listed on rarity.tools.
                                             </Typography>
                                         </li>
                                         <li>
@@ -50,8 +50,8 @@ function Roadmap(props) {
                                             <Typography span component="span" className="title" variant="h6">
                                                 3
                                             </Typography>
-                                            <Typography paragraph  component="p" align="center" gutterBottom variant="subtitle1">
-                                                Lorem, ipsum dolor sit amet
+                                            <Typography paragraph component="p" align="center" gutterBottom variant="subtitle1">
+                                                Sell everything out and get more club members.
                                             </Typography>
                                         </li>
                                         <li>
@@ -59,8 +59,8 @@ function Roadmap(props) {
                                             <Typography span component="span" className="title" variant="h6">
                                                 4
                                             </Typography>
-                                            <Typography paragraph  component="p" align="center" gutterBottom variant="subtitle1">
-                                                Lorem, ipsum dolor sit amet
+                                            <Typography paragraph component="p" align="center" gutterBottom variant="subtitle1">
+                                                Finish the game and launch it on steam.
                                             </Typography>
                                         </li>
                                         <li>
@@ -68,8 +68,8 @@ function Roadmap(props) {
                                             <Typography span component="span" className="title" variant="h6">
                                                 5
                                             </Typography>
-                                            <Typography paragraph  component="p" align="center" gutterBottom variant="subtitle1">
-                                                Lorem, ipsum dolor sit amet
+                                            <Typography paragraph component="p" align="center" gutterBottom variant="subtitle1">
+                                                All the NFT owners and contributors get a free access to game.
                                             </Typography>
                                         </li>
                                     </ul>
