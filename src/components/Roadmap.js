@@ -69,7 +69,7 @@ function Roadmap(props) {
                                                 5
                                             </Typography>
                                             <Typography paragraph component="p" align="center" gutterBottom variant="subtitle1">
-                                                All the NFT owners and contributors get a free access to game.
+                                                All the NFT owners get a free access to game.
                                             </Typography>
                                         </li>
                                     </ul>

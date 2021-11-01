@@ -28,6 +28,8 @@
 .tmul li p {
   padding: 0 20px;
   transition: 1s;
+  max-width: 300px;
+
 }
 
 .title {
@@ -71,9 +73,10 @@
   transition: 1s linear;
 }
 
-@media screen and (min-width: 728px) {
+@media screen and (min-width: 940px) {
   .timeline {
     display: block;
+    margin-bottom: 1rem;
   }
   .tmul {
     flex-direction: row;
