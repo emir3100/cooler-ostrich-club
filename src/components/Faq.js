@@ -16,7 +16,7 @@ const styles = theme => ({
 
 
   const Faqaccordion = ({question,  answer}) => (
-    <Grid item xs={6}>
+    <Grid item xs={12} md={6}>
     <Accordion>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}

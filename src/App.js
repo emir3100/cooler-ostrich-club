@@ -7,9 +7,9 @@ import Stats from './components/Stats';
 import Roadmap from './components/Roadmap';
 import Library from './components/Library';
 import Faq from './components/Faq';
+import Footer from './components/Footer';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import CssBaseline from "@material-ui/core/CssBaseline";
-
 
 
 const theme = createMuiTheme({
@@ -43,11 +43,12 @@ function App() {
       <main id="Home">
         <Navbar style={{"position": "relative"}}/>
         <Hero />
-        <About id="About" style={{"position": "relative"}}/>
-        <Stats id="Stats" style={{"position": "relative"}}/>
-        <Roadmap id="Roadmap" style={{"position": "relative"}}></Roadmap>
-        <Library id="Library" style={{"position": "relative"}}></Library>
-        <Faq id="Faq" style={{"position": "relative"}}></Faq>
+        <About id="About" style={{"position": "relative"}} />
+        <Stats id="Stats" style={{"position": "relative"}} />
+        <Roadmap id="Roadmap" style={{"position": "relative"}} />
+        <Library id="Library" style={{"position": "relative"}} />
+        <Faq id="Faq" style={{"position": "relative"}} />
+        <Footer />
       </main>
     </MuiThemeProvider>
   );
