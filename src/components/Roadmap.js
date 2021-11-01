@@ -33,7 +33,7 @@ function Roadmap(props) {
                                                 1
                                             </Typography>
                                             <Typography paragraph component="p" align="center" gutterBottom variant="subtitle1">
-                                                Launch our NFT collection on Opensea.com
+                                                Launch our NFT collection on Opensea.io
                                             </Typography>
                                         </li>
                                         <li>

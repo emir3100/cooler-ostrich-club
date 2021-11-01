@@ -5,7 +5,8 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Stats from './components/Stats';
 import Roadmap from './components/Roadmap';
-import { Library } from './components/Library';
+import Library from './components/Library';
+import Faq from './components/Faq';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import CssBaseline from "@material-ui/core/CssBaseline";
 
@@ -46,6 +47,7 @@ function App() {
         <Stats id="Stats" style={{"position": "relative"}}/>
         <Roadmap id="Roadmap" style={{"position": "relative"}}></Roadmap>
         <Library id="Library" style={{"position": "relative"}}></Library>
+        <Faq id="Faq" style={{"position": "relative"}}></Faq>
       </main>
     </MuiThemeProvider>
   );

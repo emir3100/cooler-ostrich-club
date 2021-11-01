@@ -23,8 +23,7 @@ export const Library = (props) => {
                             Library
                         </Typography>
                     </Grid>
-
-                    <AssetPost></AssetPost>
+                    <AssetPost />
                 </Grid>
             </div>  
         </div>
