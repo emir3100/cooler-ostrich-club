@@ -19,28 +19,34 @@ Link to website: [coolerostrichclub.com](http://www.coolerostrichclub.com/)
 
 - Responsive hero section
 - Spinning cube animation made with swiper.js
+- GSAP animation
 
 ### About section
 
 - Responsive about section
+- GSAP animation
 
 ### Stats section
 
 - Responsive stats section
 - Using real time data from opensea api to get stats from collection
+- GSAP animation
 
 ### Roadmap section
 
 - Responsive roadmap section
+- GSAP animation
 
 ### Library section
 
 - Responsive library section
 - Fetching data from json file
+- GSAP animation
 
 ### FAQ section
 
 - Responsive faq section
+- GSAP animation
 
 ### Footer
 
