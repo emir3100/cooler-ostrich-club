@@ -20,9 +20,9 @@ function AssetPost(props) {
     return (
         <>
             {Asset.map((AssetDetail, index) =>{
-                return  <Grid item xs={12} sm={6} md={4} spacing={20} justifyContent="center" alignItems="center">
+                return  <Grid item xs={12} sm={6} md={4} spacing={20} style={{"justifyContent": "center", "display": "flex"}}>
                     <Card sx={{ maxWidth: 345 }}>
-                    <CardActionArea>
+                    <CardActionArea href={AssetDetail.assetUrl}>
                     <CardMedia
                         component="img"
                         height="100%"

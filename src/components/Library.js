@@ -17,15 +17,14 @@ export const Library = (props) => {
     return (
         <div id="Library" className="library-wrapper" style={{"position": "relative"}}>
             <div className="custom-container" style={{"paddingBlock" : "7rem"}} >
-                <Grid container spacing={3}>
+                <Grid container spacing={5} style={{ "margin-bottom": "1.5rem"}}>
                     <Grid item xs={12} style={{"marginBottom" : "5rem"}}>
                         <Typography align="start" variant="h3" gutterBottom>
                             Library
                         </Typography>
                     </Grid>
-                    <Grid container spacing={20}>
-                        <AssetPost></AssetPost>
-                    </Grid>
+
+                    <AssetPost></AssetPost>
                 </Grid>
             </div>  
         </div>
