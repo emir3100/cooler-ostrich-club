@@ -1,14 +1,10 @@
-import React, {useRef, useEffect} from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import '../styles/About.css'
-import Button from '@material-ui/core/Button';
-import Box from '@material-ui/core/Box';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Avatar from '@material-ui/core/Avatar';
 
 gsap.registerPlugin(ScrollTrigger);
 

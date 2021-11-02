@@ -1,18 +1,10 @@
-import React, {useState, useEffect} from 'react'
-import { withStyles } from '@material-ui/core/styles';
+import React from 'react'
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import '../styles/Library.css'
 import AssetPost from './AssetPost';
 
-const styles = theme => ({
-    root: {
-      flexGrow: 1,
-    }
-  });
-
 export const Library = (props) => {
-    const { classes } = props;
 
     return (
         <div id="Library" className="library-wrapper" style={{"position": "relative"}}>
@@ -30,4 +22,4 @@ export const Library = (props) => {
     )
 }
 
-export default withStyles(styles)(Library)
+export default Library

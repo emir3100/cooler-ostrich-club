@@ -19,7 +19,6 @@ import 'swiper/swiper.min.css'
 
 // import Swiper core and required modules
 import SwiperCore, { EffectCube, Pagination, Autoplay } from "swiper";
-import { fontSize } from '@mui/system';
 
 // install Swiper modules
 SwiperCore.use([EffectCube, Pagination, Autoplay ]);
@@ -98,6 +97,7 @@ function Hero(props) {
     let text = useRef(null)
     let buttons = useRef(null)
     let image = useRef(null)
+
     useEffect(()=> {
         timeline.from(text,{
             duration: 1,
@@ -123,11 +123,11 @@ function Hero(props) {
                 <Grid container spacing={40}>
                     <Grid item xs={12} sm={12} md={12} lg={6} display="flex" style={{ "align-self": "center" }}>
 
-                        <Typography variant="h1" className={classes.grow, classes.textbreakpoint} ref={el => text = el}>
+                        <Typography variant="h1" className={[classes.grow, classes.textbreakpoint].join(" ")} ref={el => text = el}>
                             WELCOME TO COOLER OSTRICH CLUB
                         </Typography>
                         <div className={classes.buttoncontainerbreakpoint} mt="10rem" ref={el => buttons = el}>
-                            <Box display="inline">
+                            <Box display="inline">  
                                 <Button href="https://opensea.io/collection/cooler-ostrich-club" variant="contained" color="secondary" className={classes.buttonbreakpoint} style={{ "transform": "scale(1.5)", "transform-origin": "left", "margin-right": "8rem"}}>
                                     BUY ON OPENSEA
                                 </Button>

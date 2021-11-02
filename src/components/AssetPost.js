@@ -1,5 +1,4 @@
 import React from 'react'
-import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import '../styles/AssetPost.css'
@@ -9,14 +8,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea } from '@mui/material';
 
-const styles = theme => ({
-    root: {
-      flexGrow: 1,
-    }
-  });
-
-function AssetPost(props) {
-    const { classes } = props;
+function AssetPost() {
     return (
         <>
             {Asset.map((AssetDetail, index) =>{
@@ -54,4 +46,4 @@ function AssetPost(props) {
     )
 }
 
-export default withStyles(styles)(AssetPost)
+export default AssetPost

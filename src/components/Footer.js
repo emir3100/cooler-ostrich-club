@@ -44,7 +44,7 @@ export const Footer = (props) => {
                     <Typography align="start" variant="h4" gutterBottom className={classes.centertextbreakpoint}>
                       Cooler Ostrich Club
                     </Typography>
-                    <Typography align="start" className={classes.pstyle} className={classes.centertextbreakpoint}>
+                    <Typography align="start" className={classes.centertextbreakpoint, classes.pstyle}>
                       2021 Copyright. All Rights Reserved.
                     </Typography>
                   </Stack>

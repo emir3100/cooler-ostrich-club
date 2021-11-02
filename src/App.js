@@ -8,11 +8,11 @@ import Roadmap from './components/Roadmap';
 import Library from './components/Library';
 import Faq from './components/Faq';
 import Footer from './components/Footer';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { MuiThemeProvider, createTheme } from '@material-ui/core/styles';
 import CssBaseline from "@material-ui/core/CssBaseline";
 
 
-const theme = createMuiTheme({
+const theme = createTheme({
   spacing: 8,
   palette: {
     type: "dark",

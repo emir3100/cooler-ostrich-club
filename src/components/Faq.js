@@ -1,5 +1,4 @@
 import React from 'react'
-import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -7,12 +6,6 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import '../styles/Faq.css'
-
-const styles = theme => ({
-    root: {
-      flexGrow: 1,
-    }
-  });
 
 
   const Faqaccordion = ({question,  answer}) => (
@@ -34,8 +27,7 @@ const styles = theme => ({
   </Grid>
   )
 
-export const Faq = (props) => {
-    const { classes } = props;
+export const Faq = () => {
     return (
         <div id="Faq" className="faq-wrapper" style={{"position": "relative"}}>
             <div className="custom-container" style={{"paddingBlock" : "7rem"}} >
@@ -57,5 +49,5 @@ export const Faq = (props) => {
 
 
 
-export default withStyles(styles)(Faq)
+export default Faq
 
