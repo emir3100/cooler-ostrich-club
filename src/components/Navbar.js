@@ -112,7 +112,7 @@ function Navbar(props) {
           </Typography>
 
             <div className={classes.desktop} style={{ "flex-grow": "0.5" }}>
-              <Button color="inherit" href="#Home">Home</Button>
+              <Button color="inherit" href="#">Home</Button>
               <Button color="inherit" href="#About">About</Button>
               <Button color="inherit" href="#Stats">Stats</Button>
               <Button color="inherit" href="#Roadmap">Roadmap</Button>
@@ -136,7 +136,7 @@ function Navbar(props) {
         <nav aria-label="main">
           <List>
             <ListItem>
-              <ListItemButton button component="a" href="#Home">
+              <ListItemButton button component="a" href="#">
                 <ListItemText primary="Home" />
               </ListItemButton>
             </ListItem>
