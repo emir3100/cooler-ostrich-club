@@ -63,9 +63,9 @@ export const Library = () => {
                 toggleActions: "restart pause restart pause",
                 start: "35% 95%",
                 end: "100% 5%",
-                markers: true
+                markers: false
             },
-            duration: 1,
+            duration: 2,
             opacity: 0,
             y: 100,
             ease: "expo.out"

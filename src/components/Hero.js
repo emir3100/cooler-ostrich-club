@@ -93,32 +93,59 @@ const styles = theme => ({
 
 function Hero(props) {
     const { classes } = props;
-    let timeline = gsap.timeline();
     let text = useRef(null)
     let buttons = useRef(null)
     let image = useRef(null)
+    let triggerelement = useRef(null)
 
     useEffect(()=> {
-        timeline.from(text,{
-            duration: 1,
+        gsap.from(text,{
+            scrollTrigger:{
+                trigger: triggerelement,
+                endTrigger: triggerelement,
+                toggleActions: "restart pause restart pause",
+                start: "top 100%",
+                end: "100% 5%",
+                markers: false
+            },
+            duration: 2,
             opacity: 0,
             y: 100,
-            stagger: 0.6
-        })
-        .from(buttons,{
-            duration: 1,
+            ease: "expo.out"
+        });
+        gsap.from(buttons,{
+            scrollTrigger:{
+                trigger: triggerelement,
+                endTrigger: triggerelement,
+                toggleActions: "restart pause restart pause",
+                start: "top 100%",
+                end: "100% 5%",
+                markers: false
+            },
+            duration: 2,
             opacity: 0,
-            y: 100
-        }, "0.5")
-        .from(image,{
-            duration: 1,
+            y: 100,
+            ease: "expo.out"
+        });
+        gsap.from(image,{
+            scrollTrigger:{
+                trigger: triggerelement,
+                endTrigger: triggerelement,
+                toggleActions: "restart pause restart pause",
+                start: "top 100%",
+                end: "100% 5%",
+                markers: false
+            },
+            duration: 2,
             opacity: 0,
-            y: 100
-        }, "0.5");
-    }, []);
+            y: 100,
+            ease: "expo.out"
+        });
+    }, [])
+    
 
     return (
-        <div className="bg">
+        <div className="bg" ref={el => triggerelement = el}>
             <div className={classes.customcontainer}>
                 <Grid container spacing={40}>
                     <Grid item xs={12} sm={12} md={12} lg={6} display="flex" style={{ "align-self": "center" }}>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef, useEffect} from 'react'
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -6,6 +6,12 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import '../styles/Faq.css'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { CSSRulePlugin } from "gsap/CSSRulePlugin";
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(CSSRulePlugin);
 
 
   const Faqaccordion = ({question,  answer}) => (
@@ -28,9 +34,29 @@ import '../styles/Faq.css'
   )
 
 export const Faq = () => {
+
+    let faqelment = useRef(null)
+
+    useEffect(()=> {
+        gsap.from(faqelment,{
+            scrollTrigger:{
+                trigger: faqelment,
+                endTrigger: faqelment,
+                toggleActions: "restart pause restart pause",
+                start: "top 95%",
+                end: "100% 5%",
+                markers: false
+            },
+            duration: 2,
+            opacity: 0,
+            y: 100,
+            ease: "expo.out"
+        });
+    }, [])
+
     return (
-        <div id="Faq" className="faq-wrapper" style={{"position": "relative"}}>
-            <div className="custom-container" style={{"paddingBlock" : "7rem"}} >
+        <div id="Faq" className="faq-wrapper" style={{"position": "relative"}} >
+            <div className="custom-container" style={{"paddingBlock" : "7rem"}} ref={el => {faqelment = el}}>
                 <Grid container spacing={3} style={{ "margin-bottom": "1.5rem"}}>
                     <Grid item xs={12} style={{"marginBottom" : "5rem"}}>
                         <Typography align="start" variant="h3" gutterBottom>
