@@ -45,7 +45,7 @@ export const Faq = (props) => {
                             Faq
                         </Typography>
                     </Grid>
-                    <Faqaccordion question="What is Cooler Ostrich Club?" answer="Cooler Ostrich Club is a NFT collection of 12 custom made 600x600 images of diffrent cool ostriches, but there are only few rare ones that have more power than others!" />
+                    <Faqaccordion question="What is Cooler Ostrich Club?" answer="Cooler Ostrich Club is a NFT collection of 12 custom made 600x600 images of different cool ostriches, every NFT is cool but there are only few rare ones that have more power than others!" />
                     <Faqaccordion question="How do I get one?" answer="1. Create a free account at Opensea.io. 2. Download the Metamask browser extension. 3. Transfer some Etheruem to your Metamask account.  4. Shop for some cool ostriches at opensea.io" />
                     <Faqaccordion question="What benefits do I get from owning a Cooler Ostrich Club NFT?" answer="Other than being cool, you get access to our upcoming game where you will get a free copy." />
                     <Faqaccordion question="What token standard and blockchain do you use?" answer="We use the ERC-1155 token standard and the Polygon blockchain." />
