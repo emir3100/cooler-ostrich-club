@@ -55,7 +55,7 @@ export const Faq = () => {
     }, [])
 
     return (
-        <div id="Faq" className="faq-wrapper" style={{"position": "relative"}} >
+        <div id="FAQ" className="faq-wrapper" style={{"position": "relative"}} >
             <div className="custom-container" style={{"paddingBlock" : "7rem"}} ref={el => {faqelment = el}}>
                 <Grid container spacing={3} style={{ "margin-bottom": "1.5rem"}}>
                     <Grid item xs={12} style={{"marginBottom" : "5rem"}}>

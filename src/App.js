@@ -47,7 +47,7 @@ function App() {
         <Stats id="Stats" style={{"position": "relative"}} />
         <Roadmap id="Roadmap" style={{"position": "relative"}} />
         <Library id="Library" style={{"position": "relative"}} />
-        <Faq id="Faq" style={{"position": "relative"}} />
+        <Faq id="FAQ" style={{"position": "relative"}} />
         <Footer />
       </main>
     </MuiThemeProvider>
