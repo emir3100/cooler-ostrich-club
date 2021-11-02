@@ -66,7 +66,6 @@ Link to website: [coolerostrichclub.com](http://www.coolerostrichclub.com/)
 - "@testing-library/react": "^11.2.7",
 - "@testing-library/user-event": "^12.8.3",
 - "axios": "^0.24.0",
-- "bootstrap": "^5.1.3",
 - "gsap": "^3.8.0",
 - "react": "^17.0.2",
 - "react-dom": "^17.0.2",
