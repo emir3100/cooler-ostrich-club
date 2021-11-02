@@ -34,8 +34,9 @@ function Stats(props) {
                 trigger: triggerelement,
                 endTrigger: triggerelement,
                 toggleActions: "restart pause restart pause",
-                start: "15% 95%",
-                end: "95% 15%"
+                start: "35% 95%",
+                end: "100% 5%",
+                markers: true
             },
             duration: 1,
             opacity: 0,
@@ -47,8 +48,9 @@ function Stats(props) {
                 trigger: triggerelement,
                 endTrigger: triggerelement,
                 toggleActions: "restart pause restart pause",
-                start: "15% 95%",
-                end: "95% 15%"
+                start: "35% 95%",
+                end: "100% 5%",
+                markers: true
             },
             duration: 1,
             opacity: 0,
@@ -60,8 +62,9 @@ function Stats(props) {
                 trigger: triggerelement,
                 endTrigger: triggerelement,
                 toggleActions: "restart pause restart pause",
-                start: "15% 95%",
-                end: "95% 15%"
+                start: "35% 95%",
+                end: "100% 5%",
+                markers: true
             },
             duration: 1,
             opacity: 0,
@@ -73,8 +76,9 @@ function Stats(props) {
                 trigger: triggerelement,
                 endTrigger: triggerelement,
                 toggleActions: "restart pause restart pause",
-                start: "15% 95%",
-                end: "95% 15%"
+                start: "35% 95%",
+                end: "100% 5%",
+                markers: true
             },
             duration: 1,
             opacity: 0,
@@ -86,8 +90,9 @@ function Stats(props) {
                 trigger: triggerelement,
                 endTrigger: triggerelement,
                 toggleActions: "restart pause restart pause",
-                start: "15% 95%",
-                end: "95% 15%"
+                start: "35% 95%",
+                end: "100% 5%",
+                markers: true
             },
             duration: 1,
             opacity: 0,
