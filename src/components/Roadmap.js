@@ -1,22 +1,65 @@
-import React from 'react'
+import React , {useRef, useEffect} from 'react'
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import '../styles/Roadmap.css'
 
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 
-function Roadmap(props) {
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(CSSRulePlugin);
+
+function Roadmap() {
+    let titleelment = useRef(null)
+    let roadmapelement = useRef(null)
+    let triggerelement = useRef(null)
+
+    useEffect(()=> {
+        gsap.from(roadmapelement,{
+            scrollTrigger:{
+                trigger: triggerelement,
+                endTrigger: triggerelement,
+                toggleActions: "restart pause restart pause",
+                start: "35% 95%",
+                end: "100% 5%",
+                markers: true
+            },
+            duration: 1,
+            opacity: 0,
+            y: 100,
+            ease: "expo.out"
+        });
+        gsap.from(titleelment,{
+            scrollTrigger:{
+                trigger: triggerelement,
+                endTrigger: triggerelement,
+                toggleActions: "restart pause restart pause",
+                start: "35% 95%",
+                end: "100% 5%",
+                markers: true
+            },
+            duration: 1,
+            opacity: 0,
+            y: 100,
+            ease: "expo.out"
+        });
+    }, [])
+    
 
     return (
         <div id="Roadmap" className="roadmap-wrapper" style={{"position": "relative"}}>
-                    <div className="custom-container" style={{"paddingBlock" : "7rem"}} >
+                    <div className="custom-container" style={{"paddingBlock" : "7rem"}} ref={el => {triggerelement = el}}>
                         <Grid container spacing={3}>
                             <Grid item xs={12} style={{"marginBottom" : "5rem"}}>
-                                <Typography align="start" variant="h3" gutterBottom>
-                                    Roadmap
-                                </Typography>
+                                <div ref={el => {titleelment = el}}>
+                                    <Typography align="start" variant="h3" gutterBottom>
+                                        Roadmap
+                                    </Typography>
+                                </div>
                             </Grid>
                             <Grid item xs={12}>
-                                <section class="timeline">
+                                <section class="timeline" ref={el => {roadmapelement = el}}>
                                     <div class="timeline-line">
                                     <span class="timeline-innerline"></span>
                                     </div>

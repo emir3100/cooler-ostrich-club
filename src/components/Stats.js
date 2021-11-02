@@ -35,8 +35,7 @@ function Stats(props) {
                 endTrigger: triggerelement,
                 toggleActions: "restart pause restart pause",
                 start: "15% 95%",
-                end: "95% 15%",
-                markers: true
+                end: "95% 15%"
             },
             duration: 1,
             opacity: 0,
@@ -49,8 +48,7 @@ function Stats(props) {
                 endTrigger: triggerelement,
                 toggleActions: "restart pause restart pause",
                 start: "15% 95%",
-                end: "95% 15%",
-                markers: true
+                end: "95% 15%"
             },
             duration: 1,
             opacity: 0,
@@ -63,8 +61,7 @@ function Stats(props) {
                 endTrigger: triggerelement,
                 toggleActions: "restart pause restart pause",
                 start: "15% 95%",
-                end: "95% 15%",
-                markers: true
+                end: "95% 15%"
             },
             duration: 1,
             opacity: 0,
@@ -77,8 +74,7 @@ function Stats(props) {
                 endTrigger: triggerelement,
                 toggleActions: "restart pause restart pause",
                 start: "15% 95%",
-                end: "95% 15%",
-                markers: true
+                end: "95% 15%"
             },
             duration: 1,
             opacity: 0,
@@ -91,8 +87,7 @@ function Stats(props) {
                 endTrigger: triggerelement,
                 toggleActions: "restart pause restart pause",
                 start: "15% 95%",
-                end: "95% 15%",
-                markers: true
+                end: "95% 15%"
             },
             duration: 1,
             opacity: 0,
